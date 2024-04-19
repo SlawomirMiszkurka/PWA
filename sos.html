@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SOS</h1>
+        <button onclick="sendSOS()" class="btn btn-danger">Wyślij SOS</button>
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="mapa.html">Mapa</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function sendSOS() {
+            navigator.vibrate([100, 100, 100, 300, 300, 300, 100, 100, 100]);
+        }
+    </script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('service-worker.js');
+            });
+        }
+    </script>
+</body>
+</html>

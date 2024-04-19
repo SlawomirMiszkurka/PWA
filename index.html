@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikacja</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dane autorów</h1>
+        <p>Karolina Kwiecińska</p>
+        <p>Sławomir Miszkurka</p>
+        <p></p>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="mapa.html">Mapa</a></li>
+            <li><a href="sos.html">SOS</a></li>
+        </ul>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('service-worker.js');
+            });
+        }
+    </script>
+</body>
+</html>
